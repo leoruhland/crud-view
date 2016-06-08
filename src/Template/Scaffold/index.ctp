@@ -18,7 +18,7 @@
     <?= $this->element('index/bulk_actions/form_start', compact('bulkActions')); ?>
 
     <div class="table-responsive">
-        <table class="table table-hover table-condensed">
+        <table class="table table-hover table-striped table-condensed">
         <thead>
             <tr>
                 <?= $this->element('index/bulk_actions/table', compact('bulkActions', 'primaryKey', 'singularVar')); ?>
