@@ -5,10 +5,7 @@ return [
     'CrudView' => [
         'brand' => 'Crud View',
         'menu' => [
-            ['icon' => 'fa-file',   'title' => __('Pages'),     'table' => 'pages'],
-            ['icon' => 'fa-users',  'title' => __('Users'),     'table' => 'users'],
-            ['icon' => 'fa-user',   'title' => __('Administrators'),  'table' => 'administrators'],
-            ['icon' => 'fa-cogs',   'title' => __('Settings'),  'table' => 'settings'],
+
         ],
         'css' => [
             'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css',
