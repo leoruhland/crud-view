@@ -74,6 +74,7 @@ class ViewListener extends BaseListener
         $controller->set('actionConfig', $this->_action()->config());
         $controller->set('brand', $this->_getBrand());
         $controller->set('title', $this->_getPageTitle());
+        $controller->set('menu', $this->_getMenu());
         $associations = $this->associations;
         $controller->set(compact('associations'));
         $controller->set('fields', $this->_scaffoldFields($associations));
@@ -124,15 +125,20 @@ class ViewListener extends BaseListener
      *
      * @return string
      */
-    protected function _getBrand()
-    {
-        $brand = $this->_action()->config('scaffold.brand');
-        if (!empty($brand)) {
-            return $brand;
-        }
+     protected function _getBrand()
+     {
+         $brand = $this->_action()->config('scaffold.brand');
+         if (!empty($brand)) {
+             return $brand;
+         }
 
-        return Configure::read('CrudView.brand');
-    }
+         return Configure::read('CrudView.brand');
+     }
+
+     protected function _getMenu()
+     {
+         return Configure::read('CrudView.menu');
+     }
 
     /**
      * Get a list of relevant models to contain using Containable
@@ -333,6 +339,10 @@ class ViewListener extends BaseListener
             'humanize',
         ];
 
+        if ($this->_action()->scope() === 'table') {
+            $inflections[] = 'pluralize';
+        }
+
         if ($this->_action()->scope() === 'entity') {
             $inflections[] = 'singularize';
         }
@@ -480,7 +490,7 @@ class ViewListener extends BaseListener
             $associationConfiguration[$type][$assocKey]['foreignKey'] = $association->foreignKey();
             $associationConfiguration[$type][$assocKey]['propertyName'] = $association->property();
             $associationConfiguration[$type][$assocKey]['plugin'] = null;
-            $associationConfiguration[$type][$assocKey]['controller'] = $assocKey;
+            $associationConfiguration[$type][$assocKey]['controller'] = Inflector::pluralize($assocKey);
             $associationConfiguration[$type][$assocKey]['entity'] = Inflector::singularize(Inflector::underscore($assocKey));
             $associationConfiguration[$type][$assocKey]['entities'] = Inflector::underscore($assocKey);
 

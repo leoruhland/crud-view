@@ -4,10 +4,18 @@ use \Cake\Core\Plugin;
 return [
     'CrudView' => [
         'brand' => 'Crud View',
+        'menu' => [
+            ['icon' => 'fa-file',   'title' => __('Pages'),     'table' => 'pages'],
+            ['icon' => 'fa-users',  'title' => __('Users'),     'table' => 'users'],
+            ['icon' => 'fa-user',   'title' => __('Administrators'),  'table' => 'administrators'],
+            ['icon' => 'fa-cogs',   'title' => __('Settings'),  'table' => 'settings'],
+        ],
         'css' => [
             'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css',
             'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css',
             'https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.5.2/metisMenu.min.css',
             'CrudView.local'
         ],
         'js' => [
@@ -17,7 +25,8 @@ return [
                 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js',
                 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js',
                 'https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.js',
-                'https://cdn.jsdelivr.net/jquery.dirtyforms/1.2.2/jquery.dirtyforms.min.js'
+                'https://cdn.jsdelivr.net/jquery.dirtyforms/1.2.2/jquery.dirtyforms.min.js',
+                'https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.5.2/metisMenu.min.js'
             ],
             'script' => [
                 'CrudView.local'
