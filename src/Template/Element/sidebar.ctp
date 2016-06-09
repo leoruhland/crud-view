@@ -4,7 +4,7 @@
         <ul class="nav" id="side-menu">
             <?= $this->cell('CrudView.TablesList', [
                 'tables' => $menu,
-                'blacklist' => \Cake\Utility\Hash::get($actionConfig, 'scaffold.tables_blacklist')
+                'blacklist' => (isset($actionConfig)) ? \Cake\Utility\Hash::get($actionConfig, 'scaffold.tables_blacklist') : []
                 ]) ?>
             </ul>
         </div>
