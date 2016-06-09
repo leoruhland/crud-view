@@ -34,7 +34,7 @@ class TablesListCell extends Cell
                 $config = ['table' => $config];
             }
 
-            if (is_int($table)) {
+            /*if (is_int($table)) {
                 $table = $config['table'];
             }
 
@@ -42,7 +42,7 @@ class TablesListCell extends Cell
                 'action' => 'index',
                 'title' => Inflector::humanize($table),
                 'controller' => Inflector::camelize($table)
-            ];
+            ];*/
 
             $normal[$table] = $config;
         }
