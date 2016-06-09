@@ -453,3 +453,20 @@ div.actions-wrapper {
  .panel-yellow a:hover {
      color: #df8a13;
  }
+
+ .nav .dropdown > a {
+     color: #ccc;
+ }
+
+
+ .navbar-top-links > li > a:hover, .navbar-top-links > li > a:focus {
+     text-decoration: none;
+     background-color: #333;
+ }
+
+
+ .navbar-top-links .open > a, .navbar-top-links .open > a:hover, .navbar-top-links .open > a:focus {
+     background-color: #333;
+     border-color: #337ab7;
+     color: #fff;
+ }
