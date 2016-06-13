@@ -86,7 +86,7 @@ class CrudView extends View
         $this->loadHelper('Form', [
             'className' => 'BootstrapUI.Form',
             'widgets' => [
-               'datetime' => ['CrudView\View\Widget\DateTimeWidget', 'select']
+               //'datetime' => ['CrudView\View\Widget\DateTimeWidget', 'select']
             ]
         ]);
         $this->loadHelper('Flash', ['className' => 'BootstrapUI.Flash']);
