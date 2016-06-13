@@ -3,27 +3,33 @@ use \Cake\Core\Plugin;
 
 return [
     'CrudView' => [
-        'brand' => 'Crud View',
+        'brand' => 'Sistema de Reservas',
         'menu' => [
-
+            ['icon' => 'fa-user', 'title' => 'Clientes', 'action' => ['controller' => 'guests', 'action' => 'index']],
+            ['icon' => 'fa-calendar', 'title' => 'Ocupação', 'action' => ['controller' => 'rooms', 'action' => 'map']],
+            ['icon' => 'fa-calendar-check-o', 'title' => 'Reservas',  'action' => ['controller' => 'rooms', 'action' => 'calendar']],
+            ['icon' => 'fa-credit-card', 'title' => 'Cobranças', 'action' => ['controller' => 'charges', 'action' => 'index']],
+            ['icon' => 'fa-cog', 'title' => 'Configurações', 'dropdown' => [
+                ['icon' => 'fa-users', 'title' => 'Administradores', 'action' => ['controller' => 'users', 'action' => 'index']],
+                ['icon' => 'fa-bed', 'title' => 'Quartos', 'action' => ['controller' => 'rooms', 'action' => 'index']],
+                ['icon' => 'fa-bookmark', 'title' => 'Categorias de Quartos', 'action' => ['controller' => 'room_categories', 'action' => 'index']],
+            ]],
         ],
         'css' => [
-            'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.css',
-            'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css',
-            'https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.bootstrap3.min.css',
-            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css',
-            'https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.5.2/metisMenu.min.css',
+            '../vendor/bootstrap/dist/css/bootstrap.css',
+            '../vendor/selectize/dist/css/selectize.bootstrap3.css',
+            '../vendor/font-awesome/css/font-awesome.css',
+            '../vendor/metisMenu/dist/metisMenu.css',
             'CrudView.local'
         ],
         'js' => [
             'headjs' => [
-                'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js',
-                'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js',
-                'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment-with-locales.min.js',
-                'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js',
-                'https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.js',
-                'https://cdn.jsdelivr.net/jquery.dirtyforms/1.2.2/jquery.dirtyforms.min.js',
-                'https://cdnjs.cloudflare.com/ajax/libs/metisMenu/2.5.2/metisMenu.min.js'
+                '../vendor/jquery/dist/jquery.min.js',
+                '../vendor/bootstrap/dist/js/bootstrap.min.js',
+                '../vendor/selectize/dist/js/standalone/selectize.min.js',
+                '../vendor/metisMenu/dist/metisMenu.min.js',
+                '../vendor/moment/min/moment-with-locales.min.js',
+                '../vendor/jquery.dirtyforms/jquery.dirtyforms.min.js',
             ],
             'script' => [
                 'CrudView.local'
