@@ -13,7 +13,6 @@
 
     <?= $this->fetch('search'); ?>
 
-    <hr />
 
     <?= $this->element('index/bulk_actions/form_start', compact('bulkActions')); ?>
 
@@ -39,7 +38,7 @@
                 endforeach;
                 ?>
                 <?php if ($actionsExist = !empty($actions['entity'])): ?>
-                    <th><?= __d('crud', 'Actions'); ?></th>
+                    <th style="width:200px"><?= __d('crud', 'Actions'); ?></th>
                 <?php endif; ?>
             </tr>
         </thead>
