@@ -3,18 +3,7 @@ use \Cake\Core\Plugin;
 
 return [
     'CrudView' => [
-        'brand' => 'Sistema de Reservas',
-        'menu' => [
-            ['icon' => 'fa-user', 'title' => 'Clientes', 'action' => ['controller' => 'guests', 'action' => 'index']],
-            ['icon' => 'fa-calendar', 'title' => 'Ocupação', 'action' => ['controller' => 'rooms', 'action' => 'map']],
-            ['icon' => 'fa-calendar-check-o', 'title' => 'Reservas',  'action' => ['controller' => 'rooms', 'action' => 'calendar']],
-            ['icon' => 'fa-credit-card', 'title' => 'Cobranças', 'action' => ['controller' => 'charges', 'action' => 'index']],
-            ['icon' => 'fa-cog', 'title' => 'Configurações', 'dropdown' => [
-                ['icon' => 'fa-users', 'title' => 'Administradores', 'action' => ['controller' => 'users', 'action' => 'index']],
-                ['icon' => 'fa-bed', 'title' => 'Quartos', 'action' => ['controller' => 'rooms', 'action' => 'index']],
-                ['icon' => 'fa-bookmark', 'title' => 'Categorias de Quartos', 'action' => ['controller' => 'room_categories', 'action' => 'index']],
-            ]],
-        ],
+        'brand' => 'Crud View',
         'css' => [
             '../vendor/bootstrap/dist/css/bootstrap.css',
             '../vendor/selectize/dist/css/selectize.bootstrap3.css',
