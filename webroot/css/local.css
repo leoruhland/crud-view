@@ -534,3 +534,7 @@ table.dataTable thead .sorting:after {
 .huge {
     font-size: 40px;
 }
+
+.row-form > div > .row > div {
+    min-height:80px;
+}

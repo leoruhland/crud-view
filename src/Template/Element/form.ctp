@@ -5,7 +5,7 @@
 
     <?= $this->Form->create(${$viewVar}, ['role' => 'form', 'url' => $formUrl, 'type' => 'file', 'data-dirty-check' => $enableDirtyCheck, 'novalidate']); ?>
     <?= $this->CrudView->redirectUrl(); ?>
-    <div class="row">
+    <div class="row row-form">
         <div class="col-lg-<?= $this->exists('form.sidebar') ? '8' : '12' ?>">
             <div class="row">
                 <?php foreach($fields as $field => $options): ?>
