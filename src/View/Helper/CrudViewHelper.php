@@ -189,7 +189,7 @@ class CrudViewHelper extends Helper
         if ($value === null) {
             return $this->Html->label(__d('crud', 'N/A'), 'info');
         }
-        return $this->Time->timeAgoInWords($value, $options);
+        return $this->Time->format($value, 'dd/MM/yyyy HH:mm:ss');
     }
 
     /**
